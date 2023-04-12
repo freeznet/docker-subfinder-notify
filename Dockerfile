@@ -9,7 +9,7 @@ RUN	if [ "$(uname -m)" = "x86_64" ];then s6_arch=amd64;elif [ "$(uname -m)" = "a
 &&	mkdir ./s6-overlay \
 &&  tar -xvzf s6-overlay-${s6_arch}.tar.gz -C ./s6-overlay
 
-FROM python:3.6-slim-buster
+FROM python:3.8-slim-buster
 # set label
 LABEL maintainer="Jens Lee"
 ENV TZ=Asia/Shanghai PUID=1027 PGID=100
