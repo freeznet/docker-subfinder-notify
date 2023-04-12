@@ -23,7 +23,7 @@ COPY --from=builder /downloads/s6-overlay/  /
 
 # install subfinder
 RUN apt -y update
-RUN apt -y install unrar-free inotify-tools ffmpeg
+RUN apt -y install unrar-free inotify-tools ffmpeg git
 RUN pip install git+https://github.com/freeznet/subfinder.git
 RUN useradd -u 1000 -U -d /config -s /bin/false abc \
 &&  usermod -G users abc  \
